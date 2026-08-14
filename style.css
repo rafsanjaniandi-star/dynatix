@@ -396,3 +396,10 @@
     transition:none!important;
   }
 }
+
+/* Service Web - compact hero */
+.hero{
+    min-height:0 !important;
+    padding-top:42px !important;
+    padding-bottom:38px !important;
+}
