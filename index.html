@@ -1,90 +1,13 @@
-<!doctype html>
-<html lang="id">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="DYNATIX — Dynamic Technology & Innovative Solutions. IT services, free tools, digital products, networking, CCTV and practical technology solutions.">
-<meta name="robots" content="index,follow">
-<meta property="og:title" content="DYNATIX — Dynamic Technology & Innovative Solutions">
-<meta property="og:description" content="Practical IT solutions, useful free tools, digital products and technology recommendations.">
-<meta property="og:type" content="website">
-<title>DYNATIX — Dynamic Technology & Innovative Solutions</title>
-<link rel="icon" href="assets/dynatix-logo.jpg">
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-<div class="topbar"><span>⚡ Practical IT Solutions</span><span>Free Tools • Digital Products • Recommendations</span></div>
-<header>
-<a class="logo" href="#home" aria-label="DYNATIX home"><img src="assets/dynatix-logo.jpg" alt="DYNATIX"></a>
-<button id="menu" aria-label="Open navigation">☰</button>
-<nav>
-<a href="#home">Home</a><a href="#services">Services</a><a href="#tools">Free Tools</a><a href="#products">Products</a><a href="#recommendations">Recommendations</a><a href="#contact" class="nav-btn">Contact</a>
-</nav>
-</header>
-
+<!doctype html><html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="DYNATIX — Dynamic Technology & Innovative Solutions. Practical IT services, free tools, digital products and technology recommendations."><meta name="robots" content="index,follow"><meta property="og:title" content="DYNATIX — Dynamic Technology & Innovative Solutions"><meta property="og:description" content="Solusi IT praktis, free tools, digital products, dan rekomendasi teknologi."><meta property="og:type" content="website"><title>DYNATIX — Dynamic Technology & Innovative Solutions</title><link rel="icon" href="assets/dynatix-logo.jpg"><link rel="stylesheet" href="style.css"></head><body>
+<div class="topbar"><span>⚡ Dynamic Technology & Innovative Solutions</span><span>Free Tools • Digital Products • IT Solutions</span></div>
+<header><a class="brand" href="#home"><img src="assets/dynatix-logo.jpg" alt="DYNATIX"></a><button id="menu" aria-label="Buka menu">☰</button><nav><a class="active" href="#home">Home</a><a href="#services">Services</a><a href="#tools">Free Tools</a><a href="#products">Digital Products</a><a href="#recommendations">Recommendations</a><a href="#about">About</a><a class="nav-contact" href="#contact">Contact</a></nav></header>
 <main>
-<section id="home" class="hero">
-<div class="hero-copy">
-<small>DYNAMIC TECHNOLOGY & INNOVATIVE SOLUTIONS</small>
-<h1>Technology made <span>simpler.</span></h1>
-<p>DYNATIX membantu individu, UMKM, dan bisnis mendapatkan solusi IT yang praktis — dari perangkat, jaringan, software, CCTV sampai tools digital yang bisa langsung digunakan.</p>
-<div class="actions"><a class="btn" href="#services">Explore Solutions</a><a class="btn alt" href="#tools">Try Free Tools</a></div>
-<div class="ticks"><span>✓ Practical IT</span><span>✓ Useful Tools</span><span>✓ Smart Recommendations</span></div>
-</div>
-<div class="hero-art">
-<div class="ring"></div><div class="ring ring2"></div>
-<img src="assets/dynatix-logo.jpg" alt="DYNATIX logo">
-<div class="float f1"><b>IT Support</b><small>Troubleshooting</small></div>
-<div class="float f2"><b>Network</b><small>LAN • Wi-Fi</small></div>
-<div class="float f3"><b>Security</b><small>CCTV & Systems</small></div>
-</div>
-</section>
-
-<section class="stats"><div><strong>01</strong><span>Practical IT Solutions</span></div><div><strong>02</strong><span>Free Useful Tools</span></div><div><strong>03</strong><span>Digital Products</span></div><div><strong>04</strong><span>Tech Recommendations</span></div></section>
-
-<section id="services">
-<div class="section-head"><small>WHAT WE DO</small><h2>One place for everyday IT needs.</h2><p>Mulai dari kebutuhan perangkat sampai implementasi dan support.</p></div>
-<div class="grid services">
-<article><b>▣</b><h3>Laptop & PC</h3><p>Rekomendasi perangkat, upgrade, setup, dan troubleshooting untuk kerja maupun kebutuhan harian.</p><a href="#recommendations">View recommendations →</a></article>
-<article><b>⚒</b><h3>Service & Repair</h3><p>Diagnosa hardware/software, maintenance, dan bantuan troubleshooting yang praktis.</p><a href="#contact">Ask for help →</a></article>
-<article><b>◉</b><h3>Website & Software</h3><p>Website sederhana, landing page, deployment, dan solusi digital untuk kebutuhan bisnis.</p><a href="#contact">Discuss a project →</a></article>
-<article><b>◈</b><h3>CCTV & Security</h3><p>Setup, konfigurasi, monitoring, dan solusi keamanan dasar untuk rumah maupun bisnis.</p><a href="#contact">Get a consultation →</a></article>
-<article><b>⌘</b><h3>Network Solutions</h3><p>LAN, Wi-Fi, perangkat jaringan, dan troubleshooting konektivitas.</p><a href="#tools">Use network tools →</a></article>
-</div></section>
-
-<section id="tools" class="dark">
-<div class="section-head"><small>FREE TOOLS</small><h2>Useful tools. No signup required.</h2><p>Tools gratis yang benar-benar bisa dipakai. Bagian ini nantinya menjadi salah satu mesin traffic DYNATIX.</p></div>
-<div class="tools">
-<article class="tool-card"><small>NETWORK</small><h3>IP & Subnet Calculator</h3><p>Hitung network, broadcast, dan usable hosts.</p><div class="tool-row"><input id="ip" value="192.168.1.10" aria-label="IP address"><select id="cidr" aria-label="CIDR"><option>24</option><option>25</option><option>26</option><option>27</option><option>28</option><option>29</option><option>30</option></select></div><button onclick="calc()">Calculate</button><pre id="ipout">Network: —
-Broadcast: —
-Usable hosts: —</pre></article>
-<article class="tool-card"><small>DEVELOPER</small><h3>JSON Formatter</h3><p>Rapikan JSON sekaligus cek formatnya.</p><textarea id="json" placeholder='{"name":"DYNATIX"}'></textarea><button onclick="fmt()">Format JSON</button><pre id="jsonout">Result: —</pre></article>
-<article class="tool-card"><small>SECURITY</small><h3>Password Generator</h3><p>Buat password acak dengan panjang yang bisa diatur.</p><input id="pass" readonly aria-label="Generated password"><button onclick="gen()">Generate Password</button><div class="range"><span>Length</span><output id="lenout">16</output></div><input id="len" type="range" min="8" max="32" value="16" oninput="lenout.textContent=this.value"></article>
-</div>
-<div class="more-tools"><span>More tools planned</span><b>DNS Lookup</b><b>QR Generator</b><b>Image Compressor</b><b>Unit Converter</b></div>
-</section>
-
-<section id="products">
-<div class="section-head"><small>DIGITAL PRODUCTS</small><h2>Simple products that save time.</h2><p>Template, checklist, ebook, spreadsheet, dan produk digital DYNATIX yang nantinya bisa langsung dibeli.</p></div>
-<div class="grid products">
-<article><small>COMING SOON</small><h3>IT Support Checklist</h3><p>Checklist troubleshooting dan maintenance untuk teknisi.</p><div class="product-foot"><strong>Digital Product</strong><span>Coming soon</span></div></article>
-<article><small>COMING SOON</small><h3>Network Documentation Kit</h3><p>Template dokumentasi jaringan untuk rumah, kantor, dan UMKM.</p><div class="product-foot"><strong>Digital Product</strong><span>Coming soon</span></div></article>
-<article><small>COMING SOON</small><h3>IT Starter Templates</h3><p>Kumpulan template praktis untuk pekerjaan IT sehari-hari.</p><div class="product-foot"><strong>Digital Product</strong><span>Coming soon</span></div></article>
-</div></section>
-
-<section id="recommendations">
-<div class="section-head"><small>RECOMMENDATIONS</small><h2>Products worth considering.</h2><p>Kurasi perangkat dan tools yang relevan dengan kebutuhan IT. Area ini siap dikembangkan menjadi channel affiliate.</p></div>
-<div class="grid recommendations">
-<article><div class="rec-icon">💻</div><h3>Laptop for IT Work</h3><p>Laptop untuk networking, programming, sysadmin, admin, dan pekerjaan harian.</p><a href="#contact">Explore picks →</a></article>
-<article><div class="rec-icon">📡</div><h3>Networking Gear</h3><p>Router, access point, switch, cable tester, dan perlengkapan jaringan.</p><a href="#contact">Explore picks →</a></article>
-<article><div class="rec-icon">📹</div><h3>CCTV & Security</h3><p>Perangkat monitoring dan security sesuai kebutuhan pengguna.</p><a href="#contact">Explore picks →</a></article>
-</div>
-<div class="affiliate-note"><strong>Affiliate-ready.</strong> Link rekomendasi akan ditambahkan setelah kategori dan produk DYNATIX siap.</div>
-</section>
-
-<section id="contact" class="contact"><div><small>LET'S CONNECT</small><h2>Need a practical IT solution?</h2><p>DYNATIX menjadi tempat untuk menemukan solusi, tools, rekomendasi, dan layanan IT yang sederhana dan mudah dipahami.</p></div><a class="btn" href="#tools">Start with Free Tools</a></section>
-</main>
-
-<footer><div><b>DYNATIX</b><span>Dynamic Technology & Innovative Solutions</span></div><div><span>IT Solutions • Free Tools • Digital Products</span><span>© 2026 DYNATIX</span></div></footer>
-<script src="script.js"></script>
-</body></html>
+<section id="home" class="hero"><div class="hero-copy"><small>DYNAMIC TECHNOLOGY & INNOVATIVE SOLUTIONS</small><h1>Technology<br><span>Solutions</span></h1><h2>for a Smarter & Connected Future</h2><p>DYNATIX hadir untuk memberikan solusi teknologi yang praktis, inovatif, dan mudah dipahami untuk kebutuhan personal maupun bisnis.</p><div class="actions"><a class="btn primary" href="#services">Jelajahi Layanan <b>→</b></a><a class="btn secondary" href="#tools">Coba Free Tools <b>→</b></a></div><div class="trust-row"><span>✓ Practical IT Solutions</span><span>✓ Useful Free Tools</span><span>✓ Smart Recommendations</span></div></div><div class="hero-visual"><div class="circuit circuit-a"></div><div class="circuit circuit-b"></div><div class="glow"></div><img class="hero-logo" src="assets/dynatix-logo.jpg" alt="DYNATIX — Dynamic Technology & Innovative Solutions"><div class="hero-services"><div><i>▣</i><span>LAPTOP & PC<br>SALES</span></div><div><i>⚒</i><span>SERVICE &<br>REPAIR</span></div><div><i>◉</i><span>WEBSITE &<br>SOFTWARE</span></div><div><i>◈</i><span>CCTV &<br>SECURITY</span></div><div><i>⌘</i><span>NETWORK &<br>SOLUTION</span></div></div><div class="floating-card fc-a"><b>IT Support</b><small>Troubleshooting</small></div><div class="floating-card fc-b"><b>Network</b><small>LAN • Wi-Fi</small></div><div class="floating-card fc-c"><b>Security</b><small>CCTV & Systems</small></div></div></section>
+<section class="quick-strip"><div><strong>01</strong><span>IT Solutions</span></div><div><strong>02</strong><span>Free Tools</span></div><div><strong>03</strong><span>Digital Products</span></div><div><strong>04</strong><span>Tech Recommendations</span></div></section>
+<section id="services" class="section"><div class="section-head"><small>LAYANAN KAMI</small><h2>Solusi Teknologi Terlengkap</h2><p>Kami fokus pada solusi IT yang praktis, jelas, dan relevan dengan kebutuhan sehari-hari.</p></div><div class="cards services-grid"><article><div class="service-icon">▣</div><h3>Laptop & PC</h3><p>Rekomendasi perangkat, upgrade, setup, dan troubleshooting.</p><a href="#recommendations">Lihat rekomendasi →</a></article><article><div class="service-icon">⚒</div><h3>Service & Repair</h3><p>Diagnosa hardware/software, maintenance, dan troubleshooting.</p><a href="#contact">Konsultasi →</a></article><article><div class="service-icon">◉</div><h3>Website & Software</h3><p>Website sederhana, landing page, deployment, dan solusi digital.</p><a href="#contact">Bahas project →</a></article><article><div class="service-icon">◈</div><h3>CCTV & Security</h3><p>Setup, konfigurasi, monitoring, dan solusi keamanan dasar.</p><a href="#contact">Tanya layanan →</a></article><article><div class="service-icon">⌘</div><h3>Network Solutions</h3><p>LAN, Wi-Fi, perangkat jaringan, dan troubleshooting konektivitas.</p><a href="#tools">Coba tools →</a></article></div></section>
+<section id="tools" class="section dark"><div class="section-head"><small>FREE TOOLS</small><h2>Tools gratis yang benar-benar berguna.</h2><p>Tanpa signup. Kita akan terus menambah tools yang membantu pekerjaan IT sehari-hari.</p></div><div class="cards tools-grid"><article class="tool-card"><small>NETWORK</small><h3>IP & Subnet Calculator</h3><p>Hitung network, broadcast, dan usable hosts.</p><div class="tool-row"><input id="ip" value="192.168.1.10"><select id="cidr"><option>24</option><option>25</option><option>26</option><option>27</option><option>28</option><option>29</option><option>30</option></select></div><button onclick="calc()">Calculate</button><pre id="ipout">Network: —\nBroadcast: —\nUsable hosts: —</pre></article><article class="tool-card"><small>DEVELOPER</small><h3>JSON Formatter</h3><p>Rapikan JSON sekaligus cek formatnya.</p><textarea id="json" placeholder='{"name":"DYNATIX"}'></textarea><button onclick="fmt()">Format JSON</button><pre id="jsonout">Result: —</pre></article><article class="tool-card"><small>SECURITY</small><h3>Password Generator</h3><p>Buat password acak dengan panjang yang bisa diatur.</p><input id="pass" readonly><button onclick="gen()">Generate Password</button><div class="range"><span>Length</span><output id="lenout">16</output></div><input id="len" type="range" min="8" max="32" value="16" oninput="lenout.textContent=this.value"></article></div><div class="planned"><span>Coming next</span><b>DNS Lookup</b><b>QR Generator</b><b>Image Compressor</b><b>Unit Converter</b></div></section>
+<section id="products" class="section"><div class="section-head"><small>DIGITAL PRODUCTS</small><h2>Simple products that save time.</h2><p>Template, checklist, ebook, spreadsheet, dan produk digital yang nantinya bisa langsung digunakan.</p></div><div class="cards product-grid"><article><small>COMING SOON</small><h3>IT Support Checklist</h3><p>Checklist troubleshooting dan maintenance untuk teknisi.</p><span class="tag">Digital Product</span></article><article><small>COMING SOON</small><h3>Network Documentation Kit</h3><p>Template dokumentasi jaringan untuk rumah, kantor, dan UMKM.</p><span class="tag">Digital Product</span></article><article><small>COMING SOON</small><h3>IT Starter Templates</h3><p>Kumpulan template praktis untuk pekerjaan IT sehari-hari.</p><span class="tag">Digital Product</span></article></div></section>
+<section id="recommendations" class="section"><div class="section-head"><small>RECOMMENDATIONS</small><h2>Teknologi yang layak dipertimbangkan.</h2><p>Area rekomendasi perangkat dan tools yang nantinya bisa dikembangkan menjadi channel affiliate.</p></div><div class="cards recommendation-grid"><article><div class="rec-icon">💻</div><h3>Laptop for IT Work</h3><p>Laptop untuk networking, programming, sysadmin, admin, dan pekerjaan harian.</p><a href="#contact">Explore picks →</a></article><article><div class="rec-icon">📡</div><h3>Networking Gear</h3><p>Router, access point, switch, cable tester, dan perlengkapan jaringan.</p><a href="#contact">Explore picks →</a></article><article><div class="rec-icon">📹</div><h3>CCTV & Security</h3><p>Perangkat monitoring dan security sesuai kebutuhan pengguna.</p><a href="#contact">Explore picks →</a></article></div><div class="affiliate-note"><b>Affiliate-ready.</b> Link rekomendasi akan ditambahkan setelah kategori dan produk DYNATIX siap.</div></section>
+<section id="about" class="section about"><div><small>ABOUT DYNATIX</small><h2>Teknologi tanpa dibuat ribet.</h2></div><p>DYNATIX dibangun sebagai platform teknologi yang menggabungkan layanan IT, tools gratis, rekomendasi produk, dan digital products dalam satu tempat.</p></section>
+<section id="contact" class="contact"><div><small>LET'S CONNECT</small><h2>Need a practical IT solution?</h2><p>Temukan solusi, tools, rekomendasi, dan layanan IT yang sederhana dan mudah dipahami.</p></div><a class="btn primary" href="#tools">Start with Free Tools <b>→</b></a></section>
+</main><footer><div><b>DYNATIX</b><span>Dynamic Technology & Innovative Solutions</span></div><div><span>IT Solutions • Free Tools • Digital Products</span><span>© 2026 DYNATIX</span></div></footer><script src="script.js"></script></body></html>
