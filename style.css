@@ -422,3 +422,542 @@ footer b{color:#14283D}
 nav a{color:#526A80}
 .nav-contact{color:#14283D!important;border-color:#08BFEF}
 .secondary{background:#F8FBFD;color:#14283D;border-color:#8FB4CC}
+
+/* =========================================================
+   DYNATIX — SOFT SLATE TECH THEME
+   Tambahkan PALING BAWAH style.css
+   Jangan hapus CSS lama
+   ========================================================= */
+
+/* ---------- GLOBAL ---------- */
+
+html,
+body {
+  background:
+    radial-gradient(
+      circle at 12% 8%,
+      rgba(8, 191, 239, 0.10),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 88% 12%,
+      rgba(8, 127, 255, 0.08),
+      transparent 32%
+    ),
+    linear-gradient(
+      135deg,
+      #d9e7f2 0%,
+      #e4eef5 45%,
+      #d4e4ef 100%
+    ) !important;
+
+  color: #102a43 !important;
+}
+
+
+/* ---------- HEADER / NAV ---------- */
+
+header,
+nav,
+.topbar,
+.navbar {
+  background: rgba(218, 231, 241, 0.94) !important;
+
+  border-color: #b8cedd !important;
+
+  box-shadow:
+    0 4px 18px rgba(16, 42, 67, 0.08) !important;
+}
+
+
+/* ---------- MAIN AREA ---------- */
+
+main,
+section,
+.page,
+.hero,
+.tools-section {
+  background: transparent !important;
+}
+
+
+/* ---------- GENERAL TEXT ---------- */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #102a43 !important;
+}
+
+p {
+  color: #526b80 !important;
+}
+
+
+/* ---------- EYEBROW / LABEL ---------- */
+
+.eyebrow,
+.label {
+  color: #0878c9 !important;
+
+  background: rgba(8, 191, 239, 0.08) !important;
+
+  border-color: #8bcde3 !important;
+}
+
+
+/* =========================================================
+   CARDS
+   ========================================================= */
+
+.card,
+.tool-card,
+.tool,
+.panel,
+.pricing .card,
+.service-card {
+  background:
+    linear-gradient(
+      145deg,
+      rgba(248, 251, 253, 0.96),
+      rgba(231, 240, 246, 0.96)
+    ) !important;
+
+  color: #102a43 !important;
+
+  border-color: #b9cedc !important;
+
+  box-shadow:
+    0 10px 28px rgba(16, 42, 67, 0.09) !important;
+}
+
+
+/* Card hover */
+
+.card:hover,
+.tool-card:hover,
+.tool:hover,
+.service-card:hover {
+  border-color: #5ccbe8 !important;
+
+  box-shadow:
+    0 14px 34px rgba(8, 127, 255, 0.12),
+    0 0 20px rgba(8, 191, 239, 0.06) !important;
+}
+
+
+/* Card text */
+
+.card p,
+.card li,
+.tool-card p,
+.tool p,
+.service-card p {
+  color: #526b80 !important;
+}
+
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+button,
+.btn,
+.price-btn {
+  background:
+    linear-gradient(
+      135deg,
+      #087fff,
+      #08bfeF
+    ) !important;
+
+  color: #ffffff !important;
+
+  border-color: transparent !important;
+
+  box-shadow:
+    0 8px 20px rgba(8, 127, 255, 0.18) !important;
+}
+
+
+button:hover,
+.btn:hover,
+.price-btn:hover {
+  box-shadow:
+    0 10px 26px rgba(8, 127, 255, 0.25),
+    0 0 18px rgba(8, 191, 239, 0.10) !important;
+}
+
+
+/* Secondary button */
+
+.btn.alt {
+  background: #edf4f8 !important;
+
+  color: #102a43 !important;
+
+  border-color: #8eb7cb !important;
+}
+
+
+/* =========================================================
+   INPUT / SELECT / TEXTAREA
+   ========================================================= */
+
+input,
+textarea,
+select {
+  background: #edf4f8 !important;
+
+  color: #102a43 !important;
+
+  border-color: #b4cbd9 !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #7b91a3 !important;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #08bfeF !important;
+
+  box-shadow:
+    0 0 0 3px rgba(8, 191, 239, 0.12) !important;
+}
+
+
+/* =========================================================
+   FREE TOOLS
+   ========================================================= */
+
+/* Tool container */
+
+.tools,
+.tools-grid,
+.tool-grid {
+  background: transparent !important;
+}
+
+
+/* Tool cards */
+
+.tool-card {
+  background:
+    linear-gradient(
+      145deg,
+      #edf4f8,
+      #e1edf4
+    ) !important;
+}
+
+
+/* Tool titles */
+
+.tool-card h3,
+.tool h3 {
+  color: #102a43 !important;
+}
+
+
+/* Tool description */
+
+.tool-card p,
+.tool p {
+  color: #587287 !important;
+}
+
+
+/* =========================================================
+   RESULT / CODE / JSON
+   ========================================================= */
+
+pre,
+code,
+.result,
+.output,
+.tool-output,
+.json-result,
+.json-tool pre {
+  background:
+    linear-gradient(
+      145deg,
+      #d9e7f0,
+      #e4eef4
+    ) !important;
+
+  color: #173b55 !important;
+
+  border-color: #b6cedd !important;
+}
+
+
+/* JSON textarea */
+
+.json-tool textarea,
+.json-tool input {
+  background: #e7f0f5 !important;
+
+  color: #173b55 !important;
+
+  border-color: #b3cbd9 !important;
+}
+
+
+/* =========================================================
+   DARK / NAVY INFORMATION PANELS
+   ========================================================= */
+
+/*
+   Panel seperti NETWORK INSIGHT / PASSWORD PROFILE
+   sengaja tetap navy supaya ada kontras.
+*/
+
+.tool-insights,
+.insight-panel,
+.network-insight,
+.password-profile {
+  background:
+    linear-gradient(
+      145deg,
+      #16354e,
+      #102a43
+    ) !important;
+
+  color: #eaf7ff !important;
+
+  border-color: #2d617f !important;
+}
+
+
+/* Text di panel navy */
+
+.tool-insights h3,
+.tool-insights h4,
+.network-insight h3,
+.password-profile h3 {
+  color: #eaf7ff !important;
+}
+
+.tool-insights p,
+.network-insight p,
+.password-profile p {
+  color: #b9d8e8 !important;
+}
+
+
+/* Insight mini cards */
+
+.insight-grid > div {
+  background:
+    rgba(225, 241, 248, 0.10) !important;
+
+  border-color: rgba(132, 201, 225, 0.25) !important;
+}
+
+
+/* =========================================================
+   SERVICE BAR
+   ========================================================= */
+
+.services,
+.service-bar,
+.service-nav,
+.hero-services {
+  background:
+    rgba(231, 241, 247, 0.92) !important;
+
+  border-color: #b8cedd !important;
+}
+
+
+/* Service text */
+
+.services a,
+.service-bar a,
+.service-nav a,
+.hero-services a,
+.service-link {
+  color: #173b55 !important;
+}
+
+
+/* Service hover */
+
+.services a:hover,
+.service-bar a:hover,
+.service-nav a:hover,
+.hero-services a:hover,
+.service-link:hover {
+  color: #087fff !important;
+}
+
+
+/* =========================================================
+   WEBSITE / SOFTWARE PAGE
+   ========================================================= */
+
+/* Background halaman */
+
+body:has(.dev-panel),
+body:has(.pricing) {
+  background:
+    radial-gradient(
+      circle at 75% 20%,
+      rgba(8, 191, 239, 0.12),
+      transparent 35%
+    ),
+    linear-gradient(
+      135deg,
+      #d9e7f2,
+      #e8f1f6
+    ) !important;
+}
+
+
+/* Hero software */
+
+body:has(.dev-panel) .hero {
+  background: transparent !important;
+}
+
+
+/* Developer panel */
+
+.dev-panel {
+  background:
+    linear-gradient(
+      145deg,
+      #163b58,
+      #102a43
+    ) !important;
+
+  border-color: #39708d !important;
+
+  box-shadow:
+    0 16px 38px rgba(16, 42, 67, 0.16),
+    0 0 25px rgba(8, 191, 239, 0.06) !important;
+}
+
+
+/* Terminal */
+
+.terminal {
+  background: #0e263b !important;
+
+  border-color: #315a72 !important;
+}
+
+
+/* Pricing */
+
+.pricing {
+  background: transparent !important;
+}
+
+.pricing-head p {
+  color: #526b80 !important;
+}
+
+
+/* =========================================================
+   CCTV PAGE
+   ========================================================= */
+
+body:has(.cctv),
+body:has(.cctv-hero),
+body:has(.security-hero) {
+  background:
+    radial-gradient(
+      circle at 80% 15%,
+      rgba(8, 191, 239, 0.10),
+      transparent 35%
+    ),
+    linear-gradient(
+      135deg,
+      #d9e7f2,
+      #e8f1f6
+    ) !important;
+}
+
+
+/* CCTV cards */
+
+.cctv-card,
+.security-card,
+.cctv-panel {
+  background:
+    linear-gradient(
+      145deg,
+      #edf4f8,
+      #dfeaf2
+    ) !important;
+
+  border-color: #b5ccd9 !important;
+
+  color: #102a43 !important;
+
+  box-shadow:
+    0 10px 28px rgba(16, 42, 67, 0.09) !important;
+}
+
+
+/* CCTV accent */
+
+.cctv-card:hover,
+.security-card:hover {
+  border-color: #08bfeF !important;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+  background:
+    linear-gradient(
+      135deg,
+      #cbdde9,
+      #d9e7f0
+    ) !important;
+
+  color: #526b80 !important;
+
+  border-color: #b4cbd9 !important;
+}
+
+footer b,
+footer strong {
+  color: #102a43 !important;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  html,
+  body {
+    background:
+      linear-gradient(
+        180deg,
+        #dfeaf2,
+        #edf4f8
+      ) !important;
+  }
+
+  .card,
+  .tool-card,
+  .service-card {
+    box-shadow:
+      0 7px 20px rgba(16, 42, 67, 0.08) !important;
+  }
+}
