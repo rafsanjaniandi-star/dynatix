@@ -542,3 +542,235 @@ footer {
     background: rgba(235, 246, 252, 0.75);
     border-top: 1px solid #d7e8f1;
 }
+
+/* =========================================
+   DYNATIX LIGHT TECH THEME
+   Modern • Professional • Daylight Friendly
+   ========================================= */
+
+html,
+body {
+  background: #eef5f9 !important;
+  color: #102a43 !important;
+}
+
+/* Main sections */
+main,
+section,
+.hero,
+.page {
+  background: transparent;
+}
+
+/* Navbar */
+header,
+nav,
+.navbar {
+  background: #e5eef5 !important;
+  border-color: #c7d9e6 !important;
+}
+
+/* General text */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #102a43 !important;
+}
+
+p,
+li,
+span {
+  color: #486581;
+}
+
+/* Hero */
+.hero {
+  background:
+    radial-gradient(
+      circle at 85% 30%,
+      rgba(22, 199, 237, 0.10),
+      transparent 35%
+    ),
+    linear-gradient(
+      135deg,
+      #f7fbfe 0%,
+      #eef5f9 55%,
+      #e8f2f8 100%
+    ) !important;
+}
+
+/* Hero heading */
+.hero h1 {
+  color: #102a43 !important;
+}
+
+.hero h1 span,
+.hero h1 strong {
+  color: #1687f8 !important;
+}
+
+/* Eyebrow */
+.eyebrow {
+  color: #0786b8 !important;
+  border-color: #6fcde6 !important;
+  background: rgba(22, 199, 237, 0.08) !important;
+}
+
+/* Main buttons */
+.btn,
+.price-btn {
+  background: linear-gradient(
+    135deg,
+    #1687f8,
+    #16c7ed
+  ) !important;
+
+  color: #ffffff !important;
+  border-color: transparent !important;
+}
+
+.btn.alt {
+  background: #f7fbfe !important;
+  color: #102a43 !important;
+  border-color: #72bfd8 !important;
+}
+
+/* Service bar */
+.services,
+.service-bar,
+.service-nav,
+.hero-services {
+  background: rgba(247, 251, 254, 0.92) !important;
+  border-color: #bfd5e3 !important;
+}
+
+/* Service items */
+.services a,
+.service-bar a,
+.service-nav a,
+.hero-services a {
+  color: #102a43 !important;
+}
+
+.services a:hover,
+.service-bar a:hover,
+.service-nav a:hover,
+.hero-services a:hover {
+  color: #0786b8 !important;
+}
+
+/* Cards */
+.card,
+.panel,
+.pricing .card {
+  background: #f8fbfd !important;
+  color: #102a43 !important;
+  border-color: #c9dce8 !important;
+  box-shadow:
+    0 10px 30px rgba(16, 42, 67, 0.08) !important;
+}
+
+/* Card text */
+.card p,
+.card li,
+.panel p {
+  color: #486581 !important;
+}
+
+/* Featured card */
+.card.featured {
+  border-color: #38bfe5 !important;
+  box-shadow:
+    0 12px 35px rgba(22, 199, 237, 0.15) !important;
+}
+
+/* Inputs */
+input,
+textarea,
+select {
+  background: #ffffff !important;
+  color: #102a43 !important;
+  border-color: #b9d1df !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #829ab1 !important;
+}
+
+/* Result / output boxes */
+.result,
+.output,
+pre,
+code {
+  background: #e9f3f8 !important;
+  color: #102a43 !important;
+  border-color: #c2d8e5 !important;
+}
+
+/* Pricing */
+.price {
+  color: #0786b8 !important;
+}
+
+.note {
+  color: #627d98 !important;
+}
+
+/* Footer */
+footer {
+  background: #dfeaf2 !important;
+  color: #486581 !important;
+  border-color: #c3d7e3 !important;
+}
+
+footer b,
+footer strong {
+  color: #102a43 !important;
+}
+
+/* Subtle technology glow */
+.hero::before {
+  background:
+    radial-gradient(
+      circle,
+      rgba(22, 199, 237, 0.08),
+      transparent 65%
+    ) !important;
+}
+
+/* Smooth transition */
+a,
+button,
+.btn,
+.card {
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
+}
+
+/* Card hover */
+.card:hover {
+  border-color: #55c9e8 !important;
+  box-shadow:
+    0 14px 35px rgba(22, 135, 248, 0.12) !important;
+  transform: translateY(-2px);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .hero {
+    background:
+      linear-gradient(
+        180deg,
+        #f7fbfe 0%,
+        #eef5f9 100%
+      ) !important;
+  }
+}
