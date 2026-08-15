@@ -16,6 +16,30 @@
 .json-tool .json-result.error{color:#ffb5b5}
 .json-tool .json-result.success{color:#bfffe9}
 </style>
+
+<style id="dynatix-json-diagnostics-style">
+.json-result{font-size:12px!important;line-height:1.7!important}
+.json-tool .json-result.error{color:#ffc2c2}
+.json-tool .json-result.success{color:#c8ffed}
+</style>
+<style id="dynatix-tool-insights-style">
+.tool-insights{margin-top:14px;padding:13px 14px;border:1px solid #17364f;border-radius:12px;background:linear-gradient(180deg,#061321,#040b14);box-shadow:inset 0 1px 0 rgba(255,255,255,.025)}
+.insight-title{font-size:9px;letter-spacing:1.5px;color:#18d7ff;font-weight:800;margin-bottom:10px}
+.insight-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.insight-grid>div{padding:8px 9px;border:1px solid #102c43;border-radius:8px;background:#07111d;min-width:0}
+.insight-grid span{display:block;color:#6f89a4;font-size:9px;margin-bottom:3px}
+.insight-grid b{display:block;color:#dcecff;font-size:11px;overflow-wrap:anywhere}
+.insight-tip{margin-top:10px;color:#7892ad;font-size:9px;line-height:1.55}
+.strength-row{display:flex;justify-content:space-between;align-items:center;gap:10px;font-size:10px;color:#7892ad}
+.strength-row b{color:#dcecff}
+.strength-bar{height:5px;border-radius:99px;background:#0c2032;overflow:hidden;margin:7px 0 8px}
+.strength-bar i{display:block;width:0;height:100%;border-radius:99px;background:#19d4ff;transition:width .3s ease}
+.pass-meta{display:flex;justify-content:space-between;gap:8px;color:#6f89a4;font-size:9px}
+.password-insights{margin-top:14px}
+@media(max-width:900px){
+  .insight-grid{grid-template-columns:1fr 1fr}
+}
+</style>
 </head><body>
 <div class="topbar"><span>⚡ Dynamic Technology & Innovative Solutions</span><span>Free Tools • Digital Products • IT Solutions</span></div>
 <header><a class="brand" href="#home"><img src="assets/dynatix-logo.jpg" alt="DYNATIX"></a><button id="menu" aria-label="Buka menu">☰</button><nav><a class="active" href="#home">Home</a><a href="#services">Services</a><a href="#tools">Free Tools</a><a href="#products">Digital Products</a><a href="#recommendations">Recommendations</a><a href="#about">About</a><a class="nav-contact" href="#contact">Contact</a></nav></header>
@@ -27,7 +51,7 @@
 <a class="service-link" href="service-cctv.html"><i>◈</i><span>CCTV &<br>SECURITY</span></a>
 <a class="service-link" href="https://wa.me/6281219684746?text=Halo%20DYNATIX%2C%20saya%20ingin%20konsultasi%20Network%20Solution." target="_blank" rel="noopener"><i>⌘</i><span>NETWORK &<br>SOLUTION</span></a>
 </div></div></section>
-<section class="quick-strip"><div><strong>01</strong><span>IT Solutions</span></div><div><strong>02</strong><span>Free Tools</span></div><div><strong>03</strong><span>Digital Products</span></div><div><strong>04</strong><span>Tech Recommendations</span></div></section>
+
 <section id="services" class="section"><div class="section-head"><small>LAYANAN KAMI</small><h2>Solusi Teknologi Terlengkap</h2><p>Kami fokus pada solusi IT yang praktis, jelas, dan relevan dengan kebutuhan sehari-hari.</p></div><div class="cards services-grid">
 <a class="service-link" href="https://wa.me/6281219684746?text=Halo%20DYNATIX%2C%20saya%20ingin%20konsultasi%20Laptop%20%26%20PC." target="_blank" rel="noopener"><article><div class="service-icon">▣</div><h3>Laptop & PC</h3><p>Rekomendasi perangkat, upgrade, setup, dan troubleshooting.</p><span>Hubungi WhatsApp →</span></article></a>
 <a class="service-link" href="https://wa.me/6281219684746?text=Halo%20DYNATIX%2C%20saya%20ingin%20konsultasi%20Service%20%26%20Repair." target="_blank" rel="noopener"><article><div class="service-icon">⚒</div><h3>Service & Repair</h3><p>Diagnosa hardware/software, maintenance, dan troubleshooting.</p><span>Hubungi WhatsApp →</span></article></a>
@@ -37,7 +61,17 @@
 </div></section>
 <section id="tools" class="section dark"><div class="section-head"><small>FREE TOOLS</small><h2>Tools gratis yang benar-benar berguna.</h2><p>Tanpa signup. Kita akan terus menambah tools yang membantu pekerjaan IT sehari-hari.</p></div><div class="cards tools-grid"><article class="tool-card"><small>NETWORK</small><h3>IP & Subnet Calculator</h3><p>Hitung network, broadcast, dan usable hosts.</p><div class="tool-row"><input id="ip" value="192.168.1.10"><select id="cidr"><option>24</option><option>25</option><option>26</option><option>27</option><option>28</option><option>29</option><option>30</option></select></div><button onclick="calc()">Calculate</button><pre id="ipout">Network: —
 Broadcast: —
-Usable hosts: —</pre></article><article class="tool-card json-tool">
+Usable hosts: —</pre>
+<div class="tool-insights ip-insights">
+  <div class="insight-title">NETWORK INSIGHT</div>
+  <div class="insight-grid">
+    <div><span>Subnet Mask</span><b id="maskout">—</b></div>
+    <div><span>Total Addresses</span><b id="totalout">—</b></div>
+    <div><span>IP Type</span><b id="typeout">—</b></div>
+    <div><span>Usable Range</span><b id="rangeout">—</b></div>
+  </div>
+  <div class="insight-tip" id="iptip">Masukkan IP dan prefix untuk melihat ringkasan jaringan.</div>
+</div></article><article class="tool-card json-tool">
 <small>DEVELOPER</small>
 <h3>JSON Formatter & Validator</h3>
 <p>Rapikan JSON, cek validitasnya, dan lihat kesalahan format dengan lebih jelas.</p>
@@ -49,7 +83,14 @@ Usable hosts: —</pre></article><article class="tool-card json-tool">
 <div class="json-result-head"><span>RESULT</span><span id="jsonStatus" class="json-status neutral">Belum dicek</span></div>
 <pre id="jsonout" class="json-result">Masukkan JSON lalu klik “Format & Check JSON”.</pre>
 <div id="jsonHint" class="json-hint">Contoh valid: {"name":"DYNATIX","service":"IT Solutions"}</div>
-</article><article class="tool-card"><small>SECURITY</small><h3>Password Generator</h3><p>Buat password acak dengan panjang yang bisa diatur.</p><input id="pass" readonly><button onclick="gen()">Generate Password</button><div class="range"><span>Length</span><output id="lenout">16</output></div><input id="len" type="range" min="8" max="32" value="16" oninput="lenout.textContent=this.value"></article></div><div class="planned"><span>Coming next</span><b>DNS Lookup</b><b>QR Generator</b><b>Image Compressor</b><b>Unit Converter</b></div></section>
+</article><article class="tool-card password-tool"><small>SECURITY</small><h3>Password Generator</h3><p>Buat password acak dengan panjang yang bisa diatur.</p><input id="pass" readonly><button onclick="gen()">Generate Password</button><div class="range"><span>Length</span><output id="lenout">16</output></div><input id="len" type="range" min="8" max="32" value="16" oninput="lenout.textContent=this.value; updatePassProfile()">
+<div class="tool-insights password-insights">
+  <div class="insight-title">PASSWORD PROFILE</div>
+  <div class="strength-row"><span>Kekuatan</span><b id="passStrength">Belum dibuat</b></div>
+  <div class="strength-bar"><i id="passStrengthBar"></i></div>
+  <div class="pass-meta"><span id="passLengthInfo">Panjang: 16 karakter</span><span id="passEntropy">Entropy: —</span></div>
+  <div class="insight-tip">Gunakan password unik untuk setiap akun. Untuk akun penting, gunakan password manager dan aktifkan MFA/2FA.</div>
+</div></article></div><div class="planned"><span>Coming next</span><b>DNS Lookup</b><b>QR Generator</b><b>Image Compressor</b><b>Unit Converter</b></div></section>
 <section id="products" class="section"><div class="section-head"><small>DIGITAL PRODUCTS</small><h2>Simple products that save time.</h2><p>Template, checklist, ebook, spreadsheet, dan produk digital yang nantinya bisa langsung digunakan.</p></div><div class="cards product-grid"><article><small>COMING SOON</small><h3>IT Support Checklist</h3><p>Checklist troubleshooting dan maintenance untuk teknisi.</p><span class="tag">Digital Product</span></article><article><small>COMING SOON</small><h3>Network Documentation Kit</h3><p>Template dokumentasi jaringan untuk rumah, kantor, dan UMKM.</p><span class="tag">Digital Product</span></article><article><small>COMING SOON</small><h3>IT Starter Templates</h3><p>Kumpulan template praktis untuk pekerjaan IT sehari-hari.</p><span class="tag">Digital Product</span></article></div></section>
 <section id="recommendations" class="section"><div class="section-head"><small>RECOMMENDATIONS</small><h2>Teknologi yang layak dipertimbangkan.</h2><p>Area rekomendasi perangkat dan tools yang nantinya bisa dikembangkan menjadi channel affiliate.</p></div><div class="cards recommendation-grid"><article><div class="rec-icon">💻</div><h3>Laptop for IT Work</h3><p>Laptop untuk networking, programming, sysadmin, admin, dan pekerjaan harian.</p><a href="#contact">Explore picks →</a></article><article><div class="rec-icon">📡</div><h3>Networking Gear</h3><p>Router, access point, switch, cable tester, dan perlengkapan jaringan.</p><a href="#contact">Explore picks →</a></article><article><div class="rec-icon">📹</div><h3>CCTV & Security</h3><p>Perangkat monitoring dan security sesuai kebutuhan pengguna.</p><a href="#contact">Explore picks →</a></article></div><div class="affiliate-note"><b>Affiliate-ready.</b> Link rekomendasi akan ditambahkan setelah kategori dan produk DYNATIX siap.</div></section>
 <section id="about" class="section about"><div><small>ABOUT DYNATIX</small><h2>Teknologi tanpa dibuat ribet.</h2></div><p>DYNATIX dibangun sebagai platform teknologi yang menggabungkan layanan IT, tools gratis, rekomendasi produk, dan digital products dalam satu tempat.</p></section>
@@ -65,15 +106,93 @@ Usable hosts: —</pre></article><article class="tool-card json-tool">
     el.textContent = text;
   }
 
-  function errorLocation(message, input){
-    const match = message.match(/position\s+(\d+)/i);
-    if(!match) return null;
-    const pos = Number(match[1]);
+  function getPosition(input, pos){
     const before = input.slice(0, pos);
     const line = (before.match(/\n/g)||[]).length + 1;
     const lastNl = before.lastIndexOf("\n");
     const column = pos - lastNl;
     return {pos, line, column};
+  }
+
+  function getErrorPosition(message, input){
+    let match = message.match(/position\s+(\d+)/i);
+    if(match) return getPosition(input, Number(match[1]));
+
+    // Chromium sometimes reports "at line X column Y".
+    match = message.match(/line\s+(\d+)\s+column\s+(\d+)/i);
+    if(match){
+      const line = Number(match[1]), column = Number(match[2]);
+      const lines = input.split("\n");
+      let pos = 0;
+      for(let i=0;i<line-1 && i<lines.length;i++) pos += lines[i].length + 1;
+      pos += Math.max(0, column - 1);
+      return {pos, line, column};
+    }
+    return null;
+  }
+
+  function context(input, pos){
+    if(pos == null) return "";
+    const from = Math.max(0, pos - 24);
+    const to = Math.min(input.length, pos + 24);
+    return input.slice(from, to).replace(/\n/g, "↵");
+  }
+
+  function diagnose(input, err){
+    const msg = String(err && err.message || "");
+    let loc = getErrorPosition(msg, input);
+    let suggestion = "Periksa tanda kutip, koma, titik dua, dan kurung JSON di sekitar lokasi tersebut.";
+    let wrong = "Sintaks JSON tidak sesuai.";
+    let example = "";
+
+    // Common mistakes with useful, human-readable fixes.
+    const singleQuote = /'/.test(input);
+    const unquotedKey = /[{,]\s*[A-Za-z_$][\w$-]*\s*:/.test(input);
+    const trailingComma = /,\s*[}\]]/.test(input);
+    const missingComma = /["}\]]\s*["{[]/.test(input);
+    const missingColon = /["'}\]]\s+["']/.test(input);
+
+    if(singleQuote){
+      wrong = "Ditemukan tanda kutip tunggal (').";
+      suggestion = 'JSON wajib memakai tanda kutip ganda (") untuk key dan nilai string.';
+      example = 'Salah: {\'nama\': \'DYNATIX\'}\\nBenar: {"nama": "DYNATIX"}';
+    } else if(unquotedKey){
+      const m = input.match(/[{,]\s*([A-Za-z_$][\w$-]*)\s*:/);
+      wrong = "Ada nama property yang belum memakai tanda kutip.";
+      suggestion = 'Tambahkan tanda kutip ganda pada nama property.';
+      example = m ? `Salah: ${m[1]}: "value"\\nBenar: "${m[1]}": "value"` : 'Benar: {"nama": "DYNATIX"}';
+    } else if(trailingComma){
+      wrong = "Ada koma berlebih sebelum } atau ].";
+      suggestion = "Hapus koma terakhir sebelum kurung penutup.";
+      example = 'Salah: {"nama":"DYNATIX",}\\nBenar: {"nama":"DYNATIX"}';
+    } else if(missingColon){
+      wrong = "Kemungkinan tanda titik dua (:) setelah nama property hilang.";
+      suggestion = "Gunakan format \"nama\": \"nilai\".";
+      example = 'Salah: {"nama" "DYNATIX"}\\nBenar: {"nama": "DYNATIX"}';
+    } else if(missingComma){
+      wrong = "Kemungkinan ada dua property/value yang berdempetan tanpa koma.";
+      suggestion = "Tambahkan koma (,) di antara item atau property.";
+      example = 'Salah: {"nama":"DYNATIX" "status":"active"}\\nBenar: {"nama":"DYNATIX", "status":"active"}';
+    } else if(/Unexpected end/i.test(msg)){
+      wrong = "JSON berhenti sebelum struktur selesai.";
+      suggestion = "Periksa apakah semua {, [, dan tanda kutip sudah ditutup.";
+      example = 'Object: {"nama":"DYNATIX"}\\nArray: ["Laptop", "CCTV"]';
+    } else if(/Unexpected token/i.test(msg)){
+      wrong = "Ada karakter atau tanda baca yang tidak diperbolehkan di lokasi tersebut.";
+      suggestion = "Periksa karakter yang ditunjuk dan pastikan struktur JSON mengikuti format key:value.";
+    }
+
+    if(!loc){
+      // Heuristic location for common errors.
+      const patterns = [
+        /'/.test(input) ? input.indexOf("'") : -1,
+        unquotedKey ? input.search(/[{,]\s*[A-Za-z_$][\w$-]*\s*:/) : -1,
+        trailingComma ? input.search(/,\s*[}\]]/) : -1
+      ].filter(n => n >= 0);
+      if(patterns.length) loc = getPosition(input, patterns[0]);
+    }
+
+    return {msg, loc, wrong, suggestion, example};
   }
 
   window.dynatixFormatJSON = function(){
@@ -101,24 +220,24 @@ Usable hosts: —</pre></article><article class="tool-card json-tool">
       copy.disabled = false;
       copy.dataset.copyText = formatted;
       setStatus("valid","✓ JSON VALID");
-      hint.textContent = "Format JSON sudah benar dan sudah dirapikan.";
+      hint.textContent = "✓ Tidak ditemukan kesalahan. JSON sudah valid dan dirapikan.";
     }catch(err){
-      out.className = "json-result error";
+      const d = diagnose(input, err);
+      const locText = d.loc
+        ? `Baris ${d.loc.line}, kolom ${d.loc.column}`
+        : "Lokasi tidak dapat ditentukan oleh browser";
 
-      const loc = errorLocation(err.message, input);
-      let detail = "JSON tidak valid.";
-      if(loc){
-        detail += "\\n\\nKesalahan terdeteksi sekitar baris " + loc.line + ", kolom " + loc.column + ".";
-      }
-      if(/Unexpected token/i.test(err.message)){
-        detail += "\\n\\nKemungkinan ada tanda baca yang kurang/salah, misalnya koma (,), titik dua (:), atau tanda kutip.";
-      } else if(/Unexpected end/i.test(err.message)){
-        detail += "\\n\\nKemungkinan ada kurung { [ atau tanda kutip yang belum ditutup.";
-      }
-      out.textContent = detail;
+      out.className = "json-result error";
+      out.textContent =
+        "❌ JSON TIDAK VALID\n\n" +
+        "📍 LOKASI\n" + locText + "\n\n" +
+        "🔎 YANG SALAH\n" + d.wrong + "\n\n" +
+        "💡 SEHARUSNYA\n" + d.suggestion +
+        (d.example ? "\n\n🛠 CONTOH PERBAIKAN\n" + d.example.replace(/\\n/g, "\n") : "") +
+        (d.loc ? "\n\nPotongan sekitar lokasi:\n…" + context(input, d.loc.pos) + "…" : "");
 
       setStatus("invalid","✕ JSON TIDAK VALID");
-      hint.textContent = 'Catatan: teks biasa seperti "aku bisa" bukan JSON. JSON harus berupa object {...}, array [...], string, angka, true, false, atau null.';
+      hint.textContent = 'Tool ini memberi diagnosis untuk kesalahan JSON umum. Untuk error yang kompleks, gunakan lokasi dan potongan kode di atas sebagai panduan.';
     }
   };
 
@@ -134,8 +253,81 @@ Usable hosts: —</pre></article><article class="tool-card json-tool">
       setTimeout(() => $("jsonCopyBtn").textContent = "Copy Result", 1400);
     }
   };
-
-  // Keep Enter/blur behavior unobtrusive; user still controls when to validate.
+})();
+</script>
+<script id="dynatix-enhanced-tools">
+(function(){
+  function ipToInt(ip){
+    const p=ip.trim().split('.').map(Number);
+    if(p.length!==4 || p.some(n=>!Number.isInteger(n)||n<0||n>255)) return null;
+    return (((p[0]*256+p[1])*256+p[2])*256+p[3])>>>0;
+  }
+  function intToIp(n){
+    return [(n>>>24)&255,(n>>>16)&255,(n>>>8)&255,n&255].join('.');
+  }
+  function maskFromCidr(c){
+    return c===0 ? 0 : (0xFFFFFFFF << (32-c))>>>0;
+  }
+  function classifyIP(ip){
+    const p=ip.split('.').map(Number);
+    if(p[0]===10 || (p[0]===172 && p[1]>=16 && p[1]<=31) || (p[0]===192 && p[1]===168)) return "Private";
+    if(p[0]===127) return "Loopback";
+    if(p[0]===169 && p[1]===254) return "Link-local";
+    return "Public";
+  }
+  function updateIPInsight(){
+    const ipEl=document.getElementById("ip"), cidrEl=document.getElementById("cidr");
+    if(!ipEl||!cidrEl) return;
+    const n=ipToInt(ipEl.value), c=Number(cidrEl.value);
+    const mask=maskFromCidr(c);
+    const maskOut=document.getElementById("maskout"), totalOut=document.getElementById("totalout");
+    const typeOut=document.getElementById("typeout"), rangeOut=document.getElementById("rangeout"), tip=document.getElementById("iptip");
+    if(n===null){
+      [maskOut,totalOut,typeOut,rangeOut].forEach(x=>{if(x)x.textContent="—"});
+      if(tip) tip.textContent="Format IP belum valid. Contoh: 192.168.1.10";
+      return;
+    }
+    const network=(n & mask)>>>0, broadcast=(network | (~mask>>>0))>>>0;
+    const total = 2**(32-c);
+    let usable = c>=31 ? total : Math.max(0,total-2);
+    let range = c>=31 ? (c===31 ? intToIp(network)+" – "+intToIp(broadcast) : intToIp(network)) : intToIp((network+1)>>>0)+" – "+intToIp((broadcast-1)>>>0);
+    if(maskOut) maskOut.textContent=intToIp(mask);
+    if(totalOut) totalOut.textContent=total.toLocaleString("id-ID");
+    if(typeOut) typeOut.textContent=classifyIP(ipEl.value);
+    if(rangeOut) rangeOut.textContent=range;
+    if(tip) tip.textContent = c>=31
+      ? "Prefix /"+c+" memiliki ruang alamat sangat terbatas; cocok untuk link point-to-point atau kebutuhan khusus."
+      : "Network ID dan broadcast tidak dihitung sebagai usable host.";
+  }
+  window.updatePassProfile=function(){
+    const lenEl=document.getElementById("len"), lenOut=document.getElementById("lenout");
+    if(!lenEl) return;
+    const len=Number(lenEl.value);
+    if(lenOut) lenOut.textContent=len;
+    const strength=document.getElementById("passStrength"), bar=document.getElementById("passStrengthBar");
+    const li=document.getElementById("passLengthInfo"), ent=document.getElementById("passEntropy");
+    // Generator uses upper/lower/digits, so estimate from a 62-character alphabet.
+    const entropy=Math.round(len*Math.log2(62));
+    let label="Sedang", pct=50;
+    if(len<12){label="Lemah";pct=28}
+    else if(len<16){label="Cukup kuat";pct=52}
+    else if(len<20){label="Kuat";pct=76}
+    else {label="Sangat kuat";pct=96}
+    if(strength) strength.textContent=label;
+    if(bar) bar.style.width=pct+"%";
+    if(li) li.textContent="Panjang: "+len+" karakter";
+    if(ent) ent.textContent="Entropy: ~"+entropy+" bit";
+  };
+  const oldGen=window.gen;
+  window.gen=function(){
+    if(typeof oldGen==="function") oldGen();
+    setTimeout(updatePassProfile,0);
+  };
+  const ip=document.getElementById("ip"), cidr=document.getElementById("cidr");
+  if(ip) ip.addEventListener("input",updateIPInsight);
+  if(cidr) cidr.addEventListener("change",updateIPInsight);
+  updateIPInsight();
+  updatePassProfile();
 })();
 </script>
 </body></html>
