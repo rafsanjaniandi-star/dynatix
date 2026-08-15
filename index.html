@@ -1,4 +1,22 @@
-<!doctype html><html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="DYNATIX — Dynamic Technology & Innovative Solutions. Practical IT services, free tools, digital products and technology recommendations."><meta name="robots" content="index,follow"><meta property="og:title" content="DYNATIX — Dynamic Technology & Innovative Solutions"><meta property="og:description" content="Solusi IT praktis, free tools, digital products, dan rekomendasi teknologi."><meta property="og:type" content="website"><title>DYNATIX — Dynamic Technology & Innovative Solutions</title><link rel="icon" href="assets/dynatix-logo.jpg"><link rel="stylesheet" href="style.css?v=20260814-2"></head><body>
+<!doctype html><html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="DYNATIX — Dynamic Technology & Innovative Solutions. Practical IT services, free tools, digital products and technology recommendations."><meta name="robots" content="index,follow"><meta property="og:title" content="DYNATIX — Dynamic Technology & Innovative Solutions"><meta property="og:description" content="Solusi IT praktis, free tools, digital products, dan rekomendasi teknologi."><meta property="og:type" content="website"><title>DYNATIX — Dynamic Technology & Innovative Solutions</title><link rel="icon" href="assets/dynatix-logo.jpg"><link rel="stylesheet" href="style.css?v=20260814-2">
+<style id="dynatix-json-tool-style">
+.json-tool textarea{min-height:150px;resize:vertical;font-family:ui-monospace,SFMono-Regular,Consolas,"Liberation Mono",monospace;line-height:1.55}
+.json-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+.json-actions button{margin-top:0}
+.json-copy{border:1px solid #24506e!important;background:#071322!important;color:#dff7ff!important}
+.json-copy:disabled{opacity:.45;cursor:not-allowed}
+.json-result-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:14px;margin-bottom:8px}
+.json-result-head>span:first-child{font-size:10px;letter-spacing:1.5px;color:#19d4ff;font-weight:800}
+.json-status{font-size:10px;border:1px solid #24415b;border-radius:999px;padding:5px 9px;color:#8da2b8}
+.json-status.valid{color:#7dffcf;border-color:#1d6c59;background:#062018}
+.json-status.invalid{color:#ff9d9d;border-color:#6c3030;background:#210b0b}
+.json-status.neutral{color:#8da2b8}
+.json-result{min-height:96px;max-height:320px;overflow:auto;margin:0!important;white-space:pre-wrap;word-break:break-word}
+.json-hint{margin-top:9px;color:#7189a3;font-size:10px;line-height:1.6}
+.json-tool .json-result.error{color:#ffb5b5}
+.json-tool .json-result.success{color:#bfffe9}
+</style>
+</head><body>
 <div class="topbar"><span>⚡ Dynamic Technology & Innovative Solutions</span><span>Free Tools • Digital Products • IT Solutions</span></div>
 <header><a class="brand" href="#home"><img src="assets/dynatix-logo.jpg" alt="DYNATIX"></a><button id="menu" aria-label="Buka menu">☰</button><nav><a class="active" href="#home">Home</a><a href="#services">Services</a><a href="#tools">Free Tools</a><a href="#products">Digital Products</a><a href="#recommendations">Recommendations</a><a href="#about">About</a><a class="nav-contact" href="#contact">Contact</a></nav></header>
 <main>
@@ -9,7 +27,7 @@
 <a class="service-link" href="service-cctv.html"><i>◈</i><span>CCTV &<br>SECURITY</span></a>
 <a class="service-link" href="https://wa.me/6281219684746?text=Halo%20DYNATIX%2C%20saya%20ingin%20konsultasi%20Network%20Solution." target="_blank" rel="noopener"><i>⌘</i><span>NETWORK &<br>SOLUTION</span></a>
 </div></div></section>
-
+<section class="quick-strip"><div><strong>01</strong><span>IT Solutions</span></div><div><strong>02</strong><span>Free Tools</span></div><div><strong>03</strong><span>Digital Products</span></div><div><strong>04</strong><span>Tech Recommendations</span></div></section>
 <section id="services" class="section"><div class="section-head"><small>LAYANAN KAMI</small><h2>Solusi Teknologi Terlengkap</h2><p>Kami fokus pada solusi IT yang praktis, jelas, dan relevan dengan kebutuhan sehari-hari.</p></div><div class="cards services-grid">
 <a class="service-link" href="https://wa.me/6281219684746?text=Halo%20DYNATIX%2C%20saya%20ingin%20konsultasi%20Laptop%20%26%20PC." target="_blank" rel="noopener"><article><div class="service-icon">▣</div><h3>Laptop & PC</h3><p>Rekomendasi perangkat, upgrade, setup, dan troubleshooting.</p><span>Hubungi WhatsApp →</span></article></a>
 <a class="service-link" href="https://wa.me/6281219684746?text=Halo%20DYNATIX%2C%20saya%20ingin%20konsultasi%20Service%20%26%20Repair." target="_blank" rel="noopener"><article><div class="service-icon">⚒</div><h3>Service & Repair</h3><p>Diagnosa hardware/software, maintenance, dan troubleshooting.</p><span>Hubungi WhatsApp →</span></article></a>
@@ -19,9 +37,105 @@
 </div></section>
 <section id="tools" class="section dark"><div class="section-head"><small>FREE TOOLS</small><h2>Tools gratis yang benar-benar berguna.</h2><p>Tanpa signup. Kita akan terus menambah tools yang membantu pekerjaan IT sehari-hari.</p></div><div class="cards tools-grid"><article class="tool-card"><small>NETWORK</small><h3>IP & Subnet Calculator</h3><p>Hitung network, broadcast, dan usable hosts.</p><div class="tool-row"><input id="ip" value="192.168.1.10"><select id="cidr"><option>24</option><option>25</option><option>26</option><option>27</option><option>28</option><option>29</option><option>30</option></select></div><button onclick="calc()">Calculate</button><pre id="ipout">Network: —
 Broadcast: —
-Usable hosts: —</pre></article><article class="tool-card"><small>DEVELOPER</small><h3>JSON Formatter</h3><p>Rapikan JSON sekaligus cek formatnya.</p><textarea id="json" placeholder='{"name":"DYNATIX"}'></textarea><button onclick="fmt()">Format JSON</button><pre id="jsonout">Result: —</pre></article><article class="tool-card"><small>SECURITY</small><h3>Password Generator</h3><p>Buat password acak dengan panjang yang bisa diatur.</p><input id="pass" readonly><button onclick="gen()">Generate Password</button><div class="range"><span>Length</span><output id="lenout">16</output></div><input id="len" type="range" min="8" max="32" value="16" oninput="lenout.textContent=this.value"></article></div><div class="planned"><span>Coming next</span><b>DNS Lookup</b><b>QR Generator</b><b>Image Compressor</b><b>Unit Converter</b></div></section>
+Usable hosts: —</pre></article><article class="tool-card json-tool">
+<small>DEVELOPER</small>
+<h3>JSON Formatter & Validator</h3>
+<p>Rapikan JSON, cek validitasnya, dan lihat kesalahan format dengan lebih jelas.</p>
+<textarea id="json" placeholder='{"name":"DYNATIX"}' spellcheck="false"></textarea>
+<div class="json-actions">
+  <button onclick="dynatixFormatJSON()">Format & Check JSON</button>
+  <button class="json-copy" id="jsonCopyBtn" onclick="dynatixCopyJSON()" disabled>Copy Result</button>
+</div>
+<div class="json-result-head"><span>RESULT</span><span id="jsonStatus" class="json-status neutral">Belum dicek</span></div>
+<pre id="jsonout" class="json-result">Masukkan JSON lalu klik “Format & Check JSON”.</pre>
+<div id="jsonHint" class="json-hint">Contoh valid: {"name":"DYNATIX","service":"IT Solutions"}</div>
+</article><article class="tool-card"><small>SECURITY</small><h3>Password Generator</h3><p>Buat password acak dengan panjang yang bisa diatur.</p><input id="pass" readonly><button onclick="gen()">Generate Password</button><div class="range"><span>Length</span><output id="lenout">16</output></div><input id="len" type="range" min="8" max="32" value="16" oninput="lenout.textContent=this.value"></article></div><div class="planned"><span>Coming next</span><b>DNS Lookup</b><b>QR Generator</b><b>Image Compressor</b><b>Unit Converter</b></div></section>
 <section id="products" class="section"><div class="section-head"><small>DIGITAL PRODUCTS</small><h2>Simple products that save time.</h2><p>Template, checklist, ebook, spreadsheet, dan produk digital yang nantinya bisa langsung digunakan.</p></div><div class="cards product-grid"><article><small>COMING SOON</small><h3>IT Support Checklist</h3><p>Checklist troubleshooting dan maintenance untuk teknisi.</p><span class="tag">Digital Product</span></article><article><small>COMING SOON</small><h3>Network Documentation Kit</h3><p>Template dokumentasi jaringan untuk rumah, kantor, dan UMKM.</p><span class="tag">Digital Product</span></article><article><small>COMING SOON</small><h3>IT Starter Templates</h3><p>Kumpulan template praktis untuk pekerjaan IT sehari-hari.</p><span class="tag">Digital Product</span></article></div></section>
 <section id="recommendations" class="section"><div class="section-head"><small>RECOMMENDATIONS</small><h2>Teknologi yang layak dipertimbangkan.</h2><p>Area rekomendasi perangkat dan tools yang nantinya bisa dikembangkan menjadi channel affiliate.</p></div><div class="cards recommendation-grid"><article><div class="rec-icon">💻</div><h3>Laptop for IT Work</h3><p>Laptop untuk networking, programming, sysadmin, admin, dan pekerjaan harian.</p><a href="#contact">Explore picks →</a></article><article><div class="rec-icon">📡</div><h3>Networking Gear</h3><p>Router, access point, switch, cable tester, dan perlengkapan jaringan.</p><a href="#contact">Explore picks →</a></article><article><div class="rec-icon">📹</div><h3>CCTV & Security</h3><p>Perangkat monitoring dan security sesuai kebutuhan pengguna.</p><a href="#contact">Explore picks →</a></article></div><div class="affiliate-note"><b>Affiliate-ready.</b> Link rekomendasi akan ditambahkan setelah kategori dan produk DYNATIX siap.</div></section>
 <section id="about" class="section about"><div><small>ABOUT DYNATIX</small><h2>Teknologi tanpa dibuat ribet.</h2></div><p>DYNATIX dibangun sebagai platform teknologi yang menggabungkan layanan IT, tools gratis, rekomendasi produk, dan digital products dalam satu tempat.</p></section>
 <section id="contact" class="contact"><div><small>LET'S CONNECT</small><h2>Need a practical IT solution?</h2><p>Butuh konsultasi, penawaran, atau ingin membahas kebutuhan IT? Hubungi DYNATIX langsung.</p><div class="contact-links"><a href="https://wa.me/6281219684746" target="_blank" rel="noopener">WhatsApp: 0812-1968-4746</a><a href="mailto:rafsanjaniandi@gmail.com">Email: rafsanjaniandi@gmail.com</a></div></div></section>
-</main><footer><div><b>DYNATIX</b><span>Dynamic Technology & Innovative Solutions</span></div><div><span>IT Solutions • Free Tools • Digital Products</span><span>© 2026 DYNATIX</span></div></footer><script src="script.js?v=20260814-2"></script></body></html>
+</main><footer><div><b>DYNATIX</b><span>Dynamic Technology & Innovative Solutions</span></div><div><span>IT Solutions • Free Tools • Digital Products</span><span>© 2026 DYNATIX</span></div></footer><script src="script.js?v=20260814-2"></script>
+<script id="dynatix-json-tool">
+(function(){
+  const $ = id => document.getElementById(id);
+
+  function setStatus(type, text){
+    const el = $("jsonStatus");
+    el.className = "json-status " + type;
+    el.textContent = text;
+  }
+
+  function errorLocation(message, input){
+    const match = message.match(/position\s+(\d+)/i);
+    if(!match) return null;
+    const pos = Number(match[1]);
+    const before = input.slice(0, pos);
+    const line = (before.match(/\n/g)||[]).length + 1;
+    const lastNl = before.lastIndexOf("\n");
+    const column = pos - lastNl;
+    return {pos, line, column};
+  }
+
+  window.dynatixFormatJSON = function(){
+    const input = $("json").value.trim();
+    const out = $("jsonout");
+    const hint = $("jsonHint");
+    const copy = $("jsonCopyBtn");
+
+    copy.disabled = true;
+    copy.dataset.copyText = "";
+    out.className = "json-result";
+
+    if(!input){
+      setStatus("neutral","Belum dicek");
+      out.textContent = "Belum ada input. Masukkan object atau array JSON terlebih dahulu.";
+      hint.textContent = 'Contoh: {"name":"DYNATIX","service":"IT Solutions"}';
+      return;
+    }
+
+    try{
+      const parsed = JSON.parse(input);
+      const formatted = JSON.stringify(parsed, null, 2);
+      out.className = "json-result success";
+      out.textContent = formatted;
+      copy.disabled = false;
+      copy.dataset.copyText = formatted;
+      setStatus("valid","✓ JSON VALID");
+      hint.textContent = "Format JSON sudah benar dan sudah dirapikan.";
+    }catch(err){
+      out.className = "json-result error";
+
+      const loc = errorLocation(err.message, input);
+      let detail = "JSON tidak valid.";
+      if(loc){
+        detail += "\\n\\nKesalahan terdeteksi sekitar baris " + loc.line + ", kolom " + loc.column + ".";
+      }
+      if(/Unexpected token/i.test(err.message)){
+        detail += "\\n\\nKemungkinan ada tanda baca yang kurang/salah, misalnya koma (,), titik dua (:), atau tanda kutip.";
+      } else if(/Unexpected end/i.test(err.message)){
+        detail += "\\n\\nKemungkinan ada kurung { [ atau tanda kutip yang belum ditutup.";
+      }
+      out.textContent = detail;
+
+      setStatus("invalid","✕ JSON TIDAK VALID");
+      hint.textContent = 'Catatan: teks biasa seperti "aku bisa" bukan JSON. JSON harus berupa object {...}, array [...], string, angka, true, false, atau null.';
+    }
+  };
+
+  window.dynatixCopyJSON = async function(){
+    const text = $("jsonCopyBtn").dataset.copyText || "";
+    if(!text) return;
+    try{
+      await navigator.clipboard.writeText(text);
+      $("jsonCopyBtn").textContent = "✓ Copied";
+      setTimeout(() => $("jsonCopyBtn").textContent = "Copy Result", 1400);
+    }catch(e){
+      $("jsonCopyBtn").textContent = "Copy gagal";
+      setTimeout(() => $("jsonCopyBtn").textContent = "Copy Result", 1400);
+    }
+  };
+
+  // Keep Enter/blur behavior unobtrusive; user still controls when to validate.
+})();
+</script>
+</body></html>
